@@ -1,3 +1,7 @@
+.min-h-screen{
+  min-height: 100vh;
+  margin-top: 20px;
+}
 .rounded-full{
   border-radius: 50%;
 }
@@ -63,4 +67,7 @@ small {
 }
 .float-left {
   float: left;
+}
+.post-outer{
+  cursor: pointer;
 }
