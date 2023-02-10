@@ -4,9 +4,11 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { PostPage } from './pages/PostPage';
 import { Error } from './pages/Error';
+import { Navbar } from './Components/Navbar';
 function App() {
   return (
    <Router>
+    <Navbar />
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/postpage" element={<PostPage />} />
