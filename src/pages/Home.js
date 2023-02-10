@@ -30,22 +30,29 @@ export const Home = () => {
     { posts && 
    posts.data.map((post, index)=>(
     <div key={index} className="post">
-      <div>
+      <div className='owner-details'>
       <img className='owner-image' src={post.owner.picture} alt={post.owner.firstName} />
+      <div className='owner-name'>
      { post.owner.title}.{ post.owner.firstName}
+      </div>
      <div>
      {post.publishDate.substring(0, 10)} {post.publishDate.substring(11,19)}
      </div>
       </div>
+      <div className='image-details-outer'>
       <img className='post-image' src={post.image} alt={post.text} />
-      <div>
+      <div className='post-details'>
+      <span>
         {post.text}
-      </div>
+      </span>
       <div>
         {post.tags}
       </div>
       <div>
         {post.likes}
+      </div>
+      </div>
+      
       </div>
     </div>
    )
