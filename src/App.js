@@ -8,8 +8,10 @@ import { Navbar } from './Components/Navbar';
 function App() {
   return (
    <Router>
+    {/* Navbar  */}
     <Navbar />
     <Routes>
+      {/* Added route for various pages */}
         <Route path="/" element={<Home />} />
         <Route path="/post/:postid" element={<PostPage />} />
         <Route path="/about" element={<About />} />

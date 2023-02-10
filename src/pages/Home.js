@@ -10,9 +10,9 @@ export const Home = () => {
 
   useEffect(() => {
     getPost()
-  }, [])
+  },[])
 
-
+  // To fetch post from API based on page and limit
   const getPost = () => {
     fetch(`https://dummyapi.io/data/v1/post?page=${page}&limit=${limit}`, {
       method: 'GET',
@@ -33,6 +33,7 @@ export const Home = () => {
     <div className='container py-12'>
     <div className='mb-16'>
       <div className="grid gap-4 grid-cols-1 grid-cols-2">
+        {/* map every post and load data */}
       { posts && 
    posts.data.map((post, index)=>(
     <Link key={post.id} to={`/post/${post.id}`}>
@@ -42,6 +43,7 @@ export const Home = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="self-center"><img src={post.image} className="object-cover w-full h-60" alt={post.text} /></div>
+            {/* moment will convert isoString date to given format */}
             <div className="self-center"><small className="mb-4">{moment(post.publishDate).format('MMMM DD YYYY HH:mm:ss')}</small>
               <div className="mb-4">{post.text} </div>
               <div className="flex flex-wrap text-xs mb-4">
