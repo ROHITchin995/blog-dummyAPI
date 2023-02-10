@@ -32,3 +32,7 @@ code {
   --maxWidth: 40rem;
   --fullWidth: 1170px;
 }
+body {
+  text-align: center;
+  background-color: var(--darkGrey);
+}

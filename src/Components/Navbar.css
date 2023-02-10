@@ -3,6 +3,7 @@
   height: 5rem;
   display: flex;
   align-items: center;
+  width: 100vw;
 }
 .nav-links {
   display: flex;
@@ -20,7 +21,7 @@
   transition: all 0.3s linear;
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: red;
 }
 ul {
   list-style-type: none;
