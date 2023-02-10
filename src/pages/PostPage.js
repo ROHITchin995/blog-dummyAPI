@@ -10,6 +10,7 @@ export const PostPage = () => {
   var moment = require('moment');
   useEffect(() => {
     fetchPost()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 

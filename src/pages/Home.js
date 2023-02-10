@@ -10,6 +10,7 @@ export const Home = () => {
 
   useEffect(() => {
     getPost()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   // To fetch post from API based on page and limit
