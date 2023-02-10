@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import '../App.css'
 var moment = require('moment');
 export const Home = () => {
@@ -25,9 +26,7 @@ export const Home = () => {
 
   }
 
-  const postClick = (index)=>{
-    console.log(index)
-  }
+  
 
   return (
   <div className='min-h-screen'>
@@ -36,7 +35,8 @@ export const Home = () => {
       <div className="grid gap-4 grid-cols-1 grid-cols-2">
       { posts && 
    posts.data.map((post, index)=>(
-    <div key={index} className="bg-white rounded shadow p-4 overflow-hidden post-outer" onClick={()=>postClick(post.id)}>
+    <Link key={post.id} to={`/post/${post.id}`}>
+    <div key={index} className="bg-white rounded shadow p-4 overflow-hidden post-outer" >
           <div className="flex mb-4 items-center"><img src={post.owner.picture} className="rounded-full w-10 mr-4" alt={post.owner.firstName} />
             <div>{post.owner.title}. {post.owner.firstName} {post.owner.lastName}<br /><small>{moment(post.publishDate).format('MMMM DD YYYY HH:mm:ss')}</small></div>
           </div>
@@ -55,6 +55,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
+        </Link>
    )
    )
     }

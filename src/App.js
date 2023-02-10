@@ -11,7 +11,7 @@ function App() {
     <Navbar />
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/postpage" element={<PostPage />} />
+        <Route path="/post/:postid" element={<PostPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<Error />} /> 
     </Routes>

@@ -1,0 +1,8 @@
+.singlePostFlex{
+    display: flex;
+    justify-content: center;
+}
+.singlePostImage{
+    height: 100px;
+    width: 100px;
+}
