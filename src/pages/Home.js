@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import '../App.css'
 var moment = require('moment');
 export const Home = () => {
-  const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(5);
+  const [page] = useState(1);
+  const [limit] = useState(5);
   const [posts, setPosts] = useState();
  
 
