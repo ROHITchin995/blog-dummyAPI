@@ -1,0 +1,9 @@
+.about-paragraph{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.about-image{
+    margin: auto;
+    border-radius: 50%;
+    height: 10rem;
+}

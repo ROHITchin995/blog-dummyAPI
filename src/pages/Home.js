@@ -21,7 +21,6 @@ export const Home = () => {
     }).then(response => response.json())
       .then(data => {
         setPosts(data)
-        console.log(data)
       })
 
   }
